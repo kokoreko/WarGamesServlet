@@ -26,7 +26,7 @@ public class War {
 	 * The game works on a clock that logs events. the tick set in mili seconds.
 	 */
 	public static final int TIMER_TICK = 1000;
-	private static final String WAR_LOG_FILE = "D:\\Users\\omri glam\\workspace\\warServlet\\Logs\\WarLog.txt";
+	private static final String WAR_LOG_FILE = "D:\\Kosta\\git\\WarGamesServlet\\Logs\\WarLog.txt";
 	private List<Destructor> missileDestructors;
 	private List<Destructor> missileLauncherDestructors;
 	private List<Launcher> missileLaunchers;

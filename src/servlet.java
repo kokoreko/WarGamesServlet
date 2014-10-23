@@ -26,7 +26,7 @@ import Main.War;
 public class servlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	public static final String CONFIG_FILE = "D:\\Users\\omri glam\\workspace\\warServlet\\src\\war.xml";
+	public static final String CONFIG_FILE = "D:\\Kosta\\git\\WarGamesServlet\\src\\war.xml";
     private War warGames;
     private boolean failed = false;
     private List<Launcher> launchers;
@@ -68,18 +68,22 @@ public class servlet extends HttpServlet {
 		try{
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" href=\"css.css\" type=\"text/css\" media=\"all\">");
             out.println("<title>Good Side</title>");  
             out.println("</head>");
             out.println("<body>");
             out.println("<h1 align=\"center\"> IDF HTML War Panel </h1><br/>");
-            out.println("<table style=\"width:100%\">");
-            out.println("<tr><td  align =\"center\">");
-            out.println("<table style=\"width:100%\">");
-            out.println("<tr><td>");
+            out.println("<div style=\"width:100%\">");
+            out.println("<table class=\"main\">");
+            out.println("<thead class=\"thead\"><tr>");
             out.println("<th>Add munition</th>");
             out.println("<th>New Munition ID</th>");
             out.println("<th>Action state</th>");
-            out.println("</tr><tr>");
+            out.println("</tr></thead>");
+            // end of table head
+            
+            out.println("<tbody>");
+            out.println("<tr>");
             out.println("<td align=\"center\"><form method=\"get\" action=\"servlet\">");
             out.println("<input name=\"iron\" type=\"submit\" value=\"Iron dome\" />");
             out.println("</td>");
@@ -126,10 +130,10 @@ public class servlet extends HttpServlet {
             	}
             }
             out.println("<tr><td  align =\"center\">");
-            out.println("<table style=\"width:50%\">");
+            out.println("<table style=\"width:100%\">");
             out.println("<tr>");
-            out.println("<th> Choose Missile to intercept </th>");
-            out.println("<th> Action State </th>");
+            out.println("<td> Choose Missile to intercept </td>");
+            out.println("<td> Action State </td>");
             out.println("</tr>");
             out.println("<tr>");
             out.println("<td align=\"center\"> ");
@@ -187,9 +191,9 @@ public class servlet extends HttpServlet {
             out.println("</table></td></tr>");
             
             out.println("<tr><td  align =\"center\">");
-            out.println("<table style=\"width:50%\">");
-            out.println("<tr><th> Choose Launcher to Destroy </th>");
-            out.println("<th> Action State </th>");
+            out.println("<table style=\"width:100%\">");
+            out.println("<tr><td> Choose Launcher to Destroy </td>");
+            out.println("<td> Action State </td>");
             out.println("</tr>");
             out.println("<tr>");
             out.println("<td align=\"center\"> ");
@@ -239,7 +243,7 @@ public class servlet extends HttpServlet {
             		out.println("</td><td> was set for interception </td>");
             	}
             }
-            out.println("</table></td></tr></table>");
+            out.println("</tbody></table></div>");
             out.println("</body></html>");
             failed = false;
 		

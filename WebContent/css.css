@@ -1,0 +1,33 @@
+@CHARSET "windows-1255";
+
+body {
+	background-image: url("camo.png");
+}
+
+h1 {
+	font-size: 38px;
+	color: burlywood;
+	text-shadow: 1px 1px #FEFFAB;
+}
+
+.main {
+	width: 100%;
+	border-width: 2px;
+	background-color: bisque;
+	table-layout: fixed;
+	border: 5px solid;
+	border-radius: 25px;
+	padding: 10px 20px 10px 20px;
+}
+
+.thead {
+	background-color: antiquewhite;
+}
+
+input[type=text] {
+	float: right;
+}
+
+input[type=submit] {
+	float: left;
+}
